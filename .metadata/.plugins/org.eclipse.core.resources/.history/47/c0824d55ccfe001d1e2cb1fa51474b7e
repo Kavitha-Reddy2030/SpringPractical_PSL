@@ -1,0 +1,52 @@
+package com.psl.training.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.psl.training.dao.EmployeeDAO;
+import com.psl.training.entity.User;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	@Autowired
+	EmployeeDAO dao;
+
+	@Override
+	public void createEmp(User emp) {
+		dao.create(emp);
+		
+	}
+
+	@Override
+	public void updateEmp(User e) {
+		
+		
+	}
+
+	@Override
+	public void deleteEmp(User e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void selectEmpById(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public List<User> readEmp(){
+		return dao.readall();
+	}
+
+	@Override
+	public List<User> readAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

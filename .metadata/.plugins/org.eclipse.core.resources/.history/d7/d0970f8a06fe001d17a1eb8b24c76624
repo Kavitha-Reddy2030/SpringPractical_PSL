@@ -1,0 +1,51 @@
+package com.psl.training.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.psl.training.model.Employee;
+
+@Repository
+public class EmployeeDAOImpl implements EmployeeDAO {
+	
+	@Autowired
+	JdbcTemplate jdbctemplate;
+	
+	@Override
+	public void create(Employee emp) {
+		String sql = "insert into emp2 values(?,?)";
+		jdbctemplate.update(sql, emp.getId(), emp.getName(),emp.getEmail());
+		
+	}
+
+	@Override
+	public void update(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void select(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Employee> readall() {
+		EmployeeRowMapperImpl r = new EmployeeRowMapperImpl();
+		String sql = "select * from emp2";
+		List<Employee> list = jdbctemplate.query(sql, r);
+		return list;
+		
+	}
+
+}

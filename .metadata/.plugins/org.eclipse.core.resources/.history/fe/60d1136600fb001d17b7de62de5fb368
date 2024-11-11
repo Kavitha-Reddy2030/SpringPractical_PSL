@@ -1,0 +1,21 @@
+package com.psl.training.dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.psl.training.entity.Employee;
+
+public class EmployeeRowMapperImpl implements RowMapper<Employee> {
+
+	public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
+		Employee e = new Employee();
+		e.setEmpid(rs.getInt(1));
+		e.setEmpname(rs.getString(2));
+
+		return e;
+
+	}
+
+}

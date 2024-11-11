@@ -1,0 +1,19 @@
+package com.psl.training;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.AbstractRefreshableConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.psl.training.service.EmployeeService;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ApplicationContext context=new ClassPathXmlApplicationContext("config.xml");
+		Employee emp=context.getBean("Emp",Employee.class);
+		EmployeeService service=context.getBean(EmployeeService.class);
+		//service.createEmp(emp);
+	}
+
+}

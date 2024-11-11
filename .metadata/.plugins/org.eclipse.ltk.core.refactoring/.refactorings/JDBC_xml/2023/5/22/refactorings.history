@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;EmployeeRowMapperImpl.java&apos; to &apos;SpringMVC_JDBC/src/main/java/com.psl.training.dao&apos;&#x0D;&#x0A;- Original project: &apos;JDBC_xml&apos;&#x0D;&#x0A;- Destination element: &apos;SpringMVC_JDBC/src/main/java/com.psl.training.dao&apos;&#x0D;&#x0A;- Original element: &apos;com.psl.training.dao.EmployeeRowMapperImpl.java&apos;" description="Copy compilation unit" destination="=SpringMVC_JDBC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.psl.training.dao" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.psl.training.dao{EmployeeRowMapperImpl.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1685353150045" units="1" version="1.0"/>
+</session>

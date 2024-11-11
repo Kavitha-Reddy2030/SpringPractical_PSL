@@ -1,0 +1,39 @@
+package com.psl.training.dao;
+
+import java.util.List;
+
+import com.psl.training.model.Employee;
+
+public class EmployeeDAOImpl implements EmployeeDAO {
+
+	@Override
+	public void create(Employee emp) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void select(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Employee> readall() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

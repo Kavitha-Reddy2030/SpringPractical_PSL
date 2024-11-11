@@ -1,0 +1,42 @@
+package com.psl.training.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.psl.training.entity.Employee;
+
+@Repository    //To tell spring container here we have included/implementation code for database connection
+public class EmployeeDAOImplementation implements EmployeeDAO {
+	
+	@Autowired   //to link the object of jdbc with this class becoz we want method of jdbc template class
+	JdbcTemplate jdbctemplate;
+	public void create(Employee emp) {
+		String sql="insert into emp values(?,?)";
+		jdbctemplate.update(sql,emp.getId()+emp.getName());
+		
+	}
+
+	public void update(Employee emp) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void delete(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void select(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public List<Employee> readall() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

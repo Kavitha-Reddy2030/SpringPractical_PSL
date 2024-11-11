@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- It tells the spring container I want the bean of contract employee class-->
+    <!-- configuring spring bean-->
+    
+    <bean name="hospital" class="com.psl.training.Hospital">
+		<property name="name" value="KIMS">
+		</property>
+		<!-- <property name="name">
+			<value>KIMS</value>
+		</property>-->
+		<!-- Both are equivalent-->
+	 <property name="departments">
+		 <list>
+			 <value>Dentist</value>
+			 <value>Cardiologist</value>
+			 <value>Neurologist</value>
+		 </list>
+		</property>
+		
+	</bean>
+	
+</beans>

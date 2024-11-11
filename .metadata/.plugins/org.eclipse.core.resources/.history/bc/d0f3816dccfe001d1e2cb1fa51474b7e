@@ -1,0 +1,41 @@
+package com.psl.training.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.psl.training.entity.User;
+//import com.psl.training.Entity.User;
+
+@Repository
+public class EmployeeDAOImpl implements EmployeeDAO {
+	
+	@Autowired
+	SessionFactory sessionFactory;
+	public boolean create(User user) {
+	Session session = sessionFactory.openSession();
+	session.beginTransaction(); // transaction started
+	session.saveOrUpdate(user);// insert query
+	session.getTransaction().commit();
+	return true;
+	}
+	public List<User> readAll() {
+	Session session = sessionFactory.openSession();
+	return session.createQuery("from User database", User.class).list();
+	}
+	public void deleteEmployee(int id) {
+	Session session = sessionFactory.openSession();
+	User e = session.get(User.class, id);
+	session.beginTransaction();
+	session.delete(e);
+	session.getTransaction().commit();
+	}
+	
+	
+
+}

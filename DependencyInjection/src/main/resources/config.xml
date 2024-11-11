@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- It tells the spring container I want the bean of contract employee class-->
+    <!-- configuring spring bean-->
+     <bean name="con_emp1" class="com.psl.training.ContractEmployee">
+		<constructor-arg name="id" value="553"></constructor-arg>
+		<constructor-arg name="name" value="Kavitha"></constructor-arg>
+		<constructor-arg ref="con_add1"></constructor-arg>
+	</bean>
+    
+	  <bean name="reg_emp1" class="com.psl.training.RegularEmployee">
+		<constructor-arg name="id" value="556"></constructor-arg>
+		<constructor-arg name="name" value="Greeshma"></constructor-arg>
+		<constructor-arg ref="con_add2"></constructor-arg>
+	</bean>
+	
+    <bean name="con_add1" class="com.psl.training.Address">
+		<constructor-arg name="pincode" value="523303"></constructor-arg>
+		<constructor-arg name="cityname" value="Ongole"></constructor-arg>
+		<constructor-arg name="streetname" value="Islam pet"></constructor-arg>
+	</bean>
+	
+	<bean name="con_add2" class="com.psl.training.Address">
+		<constructor-arg name="pincode" value="523306"></constructor-arg>
+		<constructor-arg name="cityname" value="Tenali"></constructor-arg>
+		<constructor-arg name="streetname" value="Gandhi Nagar"></constructor-arg>
+	</bean>
+
+</beans>

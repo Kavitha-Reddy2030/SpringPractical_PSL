@@ -1,0 +1,36 @@
+package com.psl.training.dao;
+
+import java.util.List;
+
+import com.psl.training.entity.Employee;
+
+public class EmployeeDAOImplementation implements EmployeeDAO {
+	
+	@
+	JdbcTemplate jdbctemplate;
+	public void create(Employee emp) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void update(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void delete(Employee e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void select(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public List<Employee> readall() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,41 @@
+package com.psl.training;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.psl.training.config.BeanConfig;
+import com.psl.training.entity.Employee;
+import com.psl.training.service.EmployeeService;
+
+public class Main {
+	public static void main(String[] args) {
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+		Employee emp = context.getBean("emp", Employee.class);
+		
+		//emp.setId(556);
+		//emp.setName("Greeshma");
+		
+		//emp.setId(557);
+		//emp.setName("Vani");
+		
+		//emp.setId(557);
+		
+
+		EmployeeService service = context.getBean(EmployeeService.class);
+		//service.creatEmp(emp);
+		//service.updatemp(emp);
+		//service.deleteemp(emp);
+		//service.selectempbyid(553);
+		//System.out.println(service.fetchallEmployee());
+		//or traverse through below enhanced loop
+		List<Employee> list = service.fetchallEmployee();
+		for (Employee e : list) {
+			System.out.println(e);
+		}
+
+	}
+}

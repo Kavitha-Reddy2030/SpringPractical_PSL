@@ -1,0 +1,20 @@
+package com.psl.training.service;
+
+import java.util.List;
+
+import com.psl.training.entity.User;
+
+public interface EmployeeService {
+	void createEmp(User emp);// insert record
+
+	void updateEmp(User emp);
+
+	void deleteEmp(User emp);
+
+	void selectEmpById(int id);// access single record
+
+	List<User> readEmp();// Access all data
+	List<User> readAll();
+	
+
+}

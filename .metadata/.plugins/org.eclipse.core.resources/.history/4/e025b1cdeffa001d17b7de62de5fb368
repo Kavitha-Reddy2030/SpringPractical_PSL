@@ -1,0 +1,21 @@
+package com.psl.training.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.psl.training.dao.EmployeeDAO;
+import com.psl.training.entity.Employee;
+
+
+@Service    //It specifies here we have provided the services for the enduser
+public class EmployeeServiceImplementation implements EmployeeService {
+	
+	@Autowired
+	EmployeeDAO dao;
+	public void createEmp(Employee emp) {
+		
+		dao.create(emp);
+		
+	}
+
+}

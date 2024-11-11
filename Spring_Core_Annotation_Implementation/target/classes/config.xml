@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+        
+        <!-- Above root tag is changed i.e;dtd for  spring ctrl+F  context-->
+        <!-- The below line specifies the spring container to scan that package so that it come to know that we are using annotations-->
+        <context:component-scan base-package="com.psl.training"></context:component-scan>
+        <!-- Only above stmt is enough for annotation based becoz all the remaining is modified in respected classes using annotations-->
+        
+     <!-- Here we specify all the things through annotations to spring container-->  
+     
+     
+      
+    
+</beans>

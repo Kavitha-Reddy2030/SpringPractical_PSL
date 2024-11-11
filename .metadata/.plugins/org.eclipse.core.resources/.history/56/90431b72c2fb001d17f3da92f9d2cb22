@@ -1,0 +1,30 @@
+package com.psl.training;
+
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.psl.training.config.BeanConfig;
+import com.psl.training.entity.Employee;
+import com.psl.training.service.EmployeeService;
+
+public class Main {
+	public static void main(String[] args) {
+
+		ApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
+		Employee emp = new Employee(557, "Vani", "Bhimavaram", Date.valueOf(LocalDate.now()));
+
+		EmployeeService service = context.getBean(EmployeeService.class);
+		boolean IsInserted=service.insertEmployee(emp);
+		System.out.println("Data Inserted Successfully "+IsInserted);
+		/*
+		 * List<Employee> list=service.getAllEmployees(); for(Employee e:list) {
+		 * System.out.println(e); }
+		 */
+		System.out.println(service.getEmployeeById(553));
+	}
+}

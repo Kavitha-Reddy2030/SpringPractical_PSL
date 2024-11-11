@@ -1,0 +1,51 @@
+package com.psl.training.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.psl.training.entity.Employee;
+
+@Repository
+public class EmployeeDAOImpl implements EmployeeDAO {
+
+	@Autowired
+	JdbcTemplate jdbctemplate;
+
+	public void create(Employee emp) {
+		String sql = "insert into employee values(?,?,?)";
+		jdbctemplate.update(sql,emp.getEmpname(), emp.getEmpid(), emp.getCity());
+		System.out.println("Data inserted sucessfully");
+	}
+
+	public void update(Employee e) {
+		String sql = "update employee set empid=? where empname=?";
+		jdbctemplate.update(sql, e.getEmpid(), e.getEmpname());
+		System.out.println("Data updated sucessfully");
+	}
+
+	public void delete(Employee e) {
+		String sql = "delete from employee where empid=?";
+		jdbctemplate.update(sql, e.getEmpid());
+		System.out.println("Data deleted sucessfully");
+	}
+
+	public void select(int id) {// select one record from database table
+		EmployeeRowMapperImpl r = new EmployeeRowMapperImpl();
+		String sql = "select * from employee where empid=?";
+		Employee e = jdbctemplate.queryForObject(sql, r, id);
+		System.out.println(e);
+
+	}
+
+	public List<Employee> readall() {
+		EmployeeRowMapperImpl r = new EmployeeRowMapperImpl();
+		String sql = "select * from employee";
+		List<Employee> list = jdbctemplate.query(sql, r);
+		return list;
+
+	}
+
+}

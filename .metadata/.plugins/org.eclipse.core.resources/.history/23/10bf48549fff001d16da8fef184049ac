@@ -1,0 +1,10 @@
+package com.psl.training.aspect;
+
+import org.aspectj.lang.annotation.Aspect;
+
+//import org.aspectj.lang.*;
+
+@Aspect
+public class LoggingAspect{
+	
+}

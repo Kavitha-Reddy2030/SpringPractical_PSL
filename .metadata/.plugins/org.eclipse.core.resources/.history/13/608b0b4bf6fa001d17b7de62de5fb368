@@ -1,0 +1,6 @@
+package com.psl.training;
+
+public interface Hospital {
+	private String name;
+	private list<String> departments;
+}

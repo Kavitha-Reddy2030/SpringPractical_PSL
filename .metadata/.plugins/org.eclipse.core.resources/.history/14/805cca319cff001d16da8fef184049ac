@@ -1,0 +1,9 @@
+package com.psl.training.aspect;
+import org.aspectj.lang.JoinPoint;
+
+public class LoggingAspect {
+
+	public void logBefore(JoinPoint joinpoint) {
+		System.out.println("Before calling the method");
+	}
+}

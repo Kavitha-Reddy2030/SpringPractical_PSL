@@ -1,0 +1,24 @@
+1685437871221	Rename type 'MyController'
+1685437964453	Rename package 'com.psl.training.model'
+1685438073485	Rename resource 'displayEmps.jsp'
+1685438200824	Rename resource 'empregistration.jsp'
+1685438242452	Rename resource 'message.jsp'
+1685438338116	Rename type 'Employee'
+1685438907721	Rename type 'EmployeeServiceImpl'
+1685438925401	Rename type 'EmployeeService'
+1685438948313	Rename type 'EmployeeDAO'
+1685438964861	Rename type 'EmployeeDAOImpl'
+1685439113383	Delete element
+1685440393133	Rename resource 'Message.jsp'
+1685440408658	Rename resource 'Displayusers.jsp'
+1685440423897	Rename resource 'Registrationuser.jsp'
+1685440972108	Rename resource 'UserReg.jsp'
+1685441016951	Rename resource 'registrationUser.jsp'
+1685450218251	Rename package 'com.psl.training.dao'
+1685450234511	Rename package 'com.psl.training.entity'
+1685450248711	Rename package 'com.psl.training.service'
+1685512637594	Copy compilation unit
+1685512660079	Copy compilation unit
+1685512672151	Copy compilation unit
+1685512684989	Copy compilation units
+1685512764981	Copy files

@@ -1,0 +1,14 @@
+package com.psl.training.service;
+
+import java.util.List;
+
+import com.psl.training.entity.User;
+
+public interface UserService {
+	public boolean save(User user);// insert
+	public List<User> getUsers();// select
+	public void updateEmployee(User user);
+	public void deleteEmployee(int id);
+	
+
+}

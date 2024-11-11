@@ -1,0 +1,32 @@
+package com.psl.training.entity;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
+@Component("Emp")
+@ComponentScan(basePackages = "com.psl.training")
+public class Employee {
+	
+	@Value(553)
+	private int id;
+	
+	private String name;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

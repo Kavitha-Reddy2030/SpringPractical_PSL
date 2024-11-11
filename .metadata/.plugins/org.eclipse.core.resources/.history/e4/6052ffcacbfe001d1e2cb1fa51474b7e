@@ -1,0 +1,17 @@
+package com.psl.training.dao;
+
+import java.util.List;
+
+import com.psl.training.entity.User;
+
+public interface EmployeeDAO {
+	void create(User emp);// insert record
+
+	void update(User emp);
+
+	void delete(User emp);
+
+	void select(int id);// access single record
+
+	List<User> readall();// Access all data
+}

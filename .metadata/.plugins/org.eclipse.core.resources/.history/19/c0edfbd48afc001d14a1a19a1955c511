@@ -1,0 +1,13 @@
+package com.psl.training;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class MyController {
+	public ModelAndView gethomePage() {
+		ModelAndView model= new ModelAndView();
+		model.setViewName("empregistration");
+		return null;
+	}
+}

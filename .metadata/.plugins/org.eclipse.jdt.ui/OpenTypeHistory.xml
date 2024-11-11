@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Welcome/src&lt;com.psl.training{Employee.java[Employee" modifiers="513" timestamp="1685699865848"/>
+    <typeInfo handle="=SpringMVC_JDBC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.psl.training.dao{EmployeeDAO.java[EmployeeDAO" modifiers="513" timestamp="1685427345455"/>
+    <typeInfo handle="=SpringMVC_JDBC/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.psl.training.service{EmployeeService.java[EmployeeService" modifiers="513" timestamp="1685427511089"/>
+    <typeInfo handle="=Spring_AOP/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.psl.training.service{ProductService.java[ProductService" modifiers="513" timestamp="1685529444694"/>
+</typeInfoHistroy>

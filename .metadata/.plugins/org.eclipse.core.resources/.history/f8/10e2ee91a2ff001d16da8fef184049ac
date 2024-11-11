@@ -1,0 +1,12 @@
+package com.psl.training.test;
+import com.psl.training.service.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ApplicationContext context=new ClassPathXmlApplicationContext("config.xml");
+		service.multiply(20,30);
+
+	}
+
+}

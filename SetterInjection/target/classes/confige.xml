@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- It tells the spring container I want the bean of contract employee class-->
+    <!-- configuring spring bean-->
+    
+    <bean name="contract" class="com.psl.training.ContractEmployee1">
+		<property name="id" value="553">
+		</property>
+		<property name="name" value="Kavitha">
+		</property>
+	 <property name="Address1" ref="address">
+		</property>
+		
+	</bean>
+	
+	<!--<bean name="regular" class="com.psl.training.RegularEmployee1">
+	
+		<property name="id" value="553">
+		</property>
+		<property name="name" value="Kavitha">
+		</property>
+		<property name="Address1" ref="current">
+		</property>
+		</bean>  -->
+	
+	<bean name="address" class="com.psl.training.PermanentAddress">
+		<property name="cityname" value="Ongole">
+		</property>
+		<property name="pincode" value="523303">
+		</property>
+	</bean>
+	
+	 <bean name="address123" class="com.psl.training.CurrentAddress">
+		<property name="cityname" value="Ongole">
+		</property>
+		<property name="pincode" value="523303">
+		</property>
+	</bean>
+	
+</beans>

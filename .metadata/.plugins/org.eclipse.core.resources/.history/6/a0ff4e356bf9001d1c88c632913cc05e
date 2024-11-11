@@ -1,0 +1,18 @@
+package com.psl.training.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.psl.training.dao.EmployeeDAO;
+import com.psl.training.entity.Employee;
+
+public class EmployeeServiceImplementation implements EmployeeService {
+	
+	@Autowired
+	EmployeeDAO dao;
+	public void create(Employee emp) {
+		
+		dao.create(emp);
+		
+	}
+
+}

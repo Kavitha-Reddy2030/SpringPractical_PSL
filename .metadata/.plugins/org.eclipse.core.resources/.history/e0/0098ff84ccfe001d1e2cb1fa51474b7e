@@ -1,0 +1,30 @@
+package com.psl.training.service;
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.psl.training.dao.UserDAO;
+import com.psl.training.entity.User;
+
+@Service
+public class UserServiceImpl implements UserService {
+	
+	@Autowired
+	UserDAO dao;
+	public boolean save(User user) {
+	//business logic
+	return dao.create(user);
+	}
+	public List<User> getUsers() {
+	return dao.readAll();
+	}
+	public void deleteEmployee(int id) {
+	dao.deleteEmployee(id);
+	}
+	
+
+
+
+}

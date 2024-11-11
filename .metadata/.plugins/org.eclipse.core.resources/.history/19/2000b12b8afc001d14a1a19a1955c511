@@ -1,0 +1,6 @@
+package com.psl.training;
+
+@Controller("")
+public class MyController {
+
+}
